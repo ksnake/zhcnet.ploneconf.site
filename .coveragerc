@@ -1,0 +1,6 @@
+[report]
+include =
+    src/zhcnet/*
+omit =
+    */test*
+    */upgrades/*
