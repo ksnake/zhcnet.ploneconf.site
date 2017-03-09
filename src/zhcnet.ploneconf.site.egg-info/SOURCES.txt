@@ -17,6 +17,7 @@ src/zhcnet.ploneconf.site.egg-info/not-zip-safe
 src/zhcnet.ploneconf.site.egg-info/requires.txt
 src/zhcnet.ploneconf.site.egg-info/top_level.txt
 src/zhcnet/ploneconf/__init__.py
+src/zhcnet/ploneconf/site/.project
 src/zhcnet/ploneconf/site/__init__.py
 src/zhcnet/ploneconf/site/configure.zcml
 src/zhcnet/ploneconf/site/interfaces.py
@@ -24,12 +25,17 @@ src/zhcnet/ploneconf/site/setuphandlers.py
 src/zhcnet/ploneconf/site/testing.py
 src/zhcnet/ploneconf/site/browser/__init__.py
 src/zhcnet/ploneconf/site/browser/configure.zcml
+src/zhcnet/ploneconf/site/browser/views.py
 src/zhcnet/ploneconf/site/browser/overrides/.gitkeep
+src/zhcnet/ploneconf/site/browser/overrides/plone.app.contenttypes.browser.templates.listing_tabular.pt
 src/zhcnet/ploneconf/site/browser/static/.gitkeep
+src/zhcnet/ploneconf/site/browser/templates/tabularcontact.pt
+src/zhcnet/ploneconf/site/browser/templates/training.pt
 src/zhcnet/ploneconf/site/locales/update.sh
 src/zhcnet/ploneconf/site/locales/zhcnet.ploneconf.site.pot
 src/zhcnet/ploneconf/site/profiles/default/browserlayer.xml
 src/zhcnet/ploneconf/site/profiles/default/metadata.xml
+src/zhcnet/ploneconf/site/profiles/default/types/Folder.xml
 src/zhcnet/ploneconf/site/profiles/uninstall/browserlayer.xml
 src/zhcnet/ploneconf/site/tests/__init__.py
 src/zhcnet/ploneconf/site/tests/test_robot.py

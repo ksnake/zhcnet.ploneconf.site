@@ -23,6 +23,15 @@
     template="templates/training.pt"
     permission="zope2.View"
     />
+	
+  <browser:page
+    name="tabularcontact"
+    for="*"
+    layer="zope.interface.Interface"
+    class=".views.TabularContact"
+    template="templates/tabularcontact.pt"
+    permission="zope2.View"
+    />
 
 
 </configure>
