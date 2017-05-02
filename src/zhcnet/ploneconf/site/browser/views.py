@@ -3,8 +3,8 @@ from plone import api
 from plone.dexterity.browser.view import DefaultView
 
 
-class TabularContact(BrowserView):
-    """ A list of Contacts
+class TestTabularContact(BrowserView):
+    """ A test list of Contacts
     """
 
     def contact(self):
