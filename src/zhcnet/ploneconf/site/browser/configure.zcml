@@ -17,4 +17,60 @@
       directory="static"
       />
 
+  <browser:page
+    name="training"
+	class="plone.dexterity.browser.view.DefaultView"
+    for="*"
+    template="templates/training.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="contactzone"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contactzone.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="contactgroupement"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contactgroupement.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="contactpostedesecours"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contactpostedesecours.pt"
+    permission="zope2.View"
+    />  
+
+  <browser:page
+    name="contactservice"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contactservice.pt"
+    permission="zope2.View"
+    />   
+
+  <browser:page
+    name="contactagent"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contactagent.pt"
+    permission="zope2.View"
+    /> 
+    
+    
+  <browser:page
+    name="contact"
+	class=".views.ContactView"
+    for="*"
+    template="templates/contact.pt"
+    permission="zope2.View"
+    />  
 </configure>

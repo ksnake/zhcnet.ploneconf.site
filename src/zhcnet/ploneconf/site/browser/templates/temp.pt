@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1 tal:content="string:green">Hello ZHC</h1>
+
+    <p>red</p>
+
+<a href="http://www.mssharepointconference.com"
+   tal:define="a_fine_url string:http://www.ploneconf.org"
+   tal:attributes="href a_fine_url"
+   tal:content="string:An even better conference">
+    A sharepoint conference
+</a>
+
+</body>
+</html>

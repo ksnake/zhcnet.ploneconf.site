@@ -1,0 +1,41 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="zhcnet.ploneconf.site">
+  <body>
+    <metal:content-core fill-slot="content-core">
+    <div class="" id="contactitem">
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col-md-6" style="text-align:center;">
+          <span>Téléphone : </span><br/><br/>
+          <span style="font-size:1.5em;" class="label label-primary" tal:content="context/telephone">
+            Le téléphone
+          </span>
+        </div>
+        <div class="col-md-6">
+          <span>Mail : </span>
+          <a tal:define="email context/mail" tal:attributes="href string:mailto:$email;title context/mail" tal:content="context/mail">E-Mail</a>
+          <br/>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <h2>Informations</h2>
+      <p>
+      <!--<span tal:content="python: context.Title()">
+        Le Titre
+      </span><br/>-->
+        <span class="description" tal:content="python: context.Description()">
+          La Description
+        </span>
+      </p>
+      <p>&nbsp;</p>
+      <div>
+        <span>Localisation : </span>
+        <span  tal:content="context/localisation">
+          La localisation
+        </span>
+      </div>
+    </div>
+    </metal:content-core>
+  </body>
+</html>

@@ -29,6 +29,8 @@ src/zhcnet/ploneconf/site/browser/views.py
 src/zhcnet/ploneconf/site/browser/overrides/.gitkeep
 src/zhcnet/ploneconf/site/browser/overrides/plone.app.contenttypes.browser.templates.listing_tabular.pt.old
 src/zhcnet/ploneconf/site/browser/static/.gitkeep
+src/zhcnet/ploneconf/site/browser/templates/temp.pt
+src/zhcnet/ploneconf/site/browser/templates/training.pt
 src/zhcnet/ploneconf/site/locales/update.sh
 src/zhcnet/ploneconf/site/locales/zhcnet.ploneconf.site.pot
 src/zhcnet/ploneconf/site/profiles/default/browserlayer.xml

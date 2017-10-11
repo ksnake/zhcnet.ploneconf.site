@@ -1,0 +1,121 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="zhcnet.ploneconf.site">
+  <body>
+    <metal:content-core fill-slot="content-core">
+    <div class="" id="contactitem">
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col-md-6" style="text-align:center;">
+          <span>Téléphone : </span><br/><br/>
+          <span style="font-size:1.5em;" class="label label-primary" tal:content="context/telephone">
+            Le téléphone
+          </span>
+        </div>
+        <div class="col-md-6">
+          <span>Mail : </span>
+          <a tal:define="email context/mail" tal:attributes="href string:mailto:$email;title context/mail" tal:content="context/mail">E-Mail</a>
+          <br/>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <h2>Informations</h2>
+      <p>
+      <!--<span tal:content="python: context.Title()">
+        Le Titre
+      </span><br/>-->
+        <span class="description" tal:content="python: context.Description()">
+          La Description
+        </span>
+      </p>
+      <p>&nbsp;</p>
+      <div>
+        <span>Zone de secours : </span>
+        <span  tal:content="context/zone_de_secours">
+          Zone de secours
+        </span>
+      </div>
+      <p>&nbsp;</p>
+      <div>
+        <span>Chef de groupement : </span>
+        <span  tal:content="context/chef_de_groupement">
+          L'adresse
+        </span>
+      </div>
+      <p>&nbsp;</p>
+      <div>
+        <span>Adresse (Siège) : </span>
+        <span  tal:content="context/siege">
+          L'adresse
+        </span>
+      </div>
+      <p>&nbsp;</p>
+      <h2>Services</h2>
+      <table  class="listing"
+              id="services"
+              tal:define="services python:view.services()">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Telephone</th>
+            <th>Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="service services">
+            <td>
+              <a href=""
+                tal:attributes="href python:service['url'];
+                                title python:service['description']"
+                tal:content="python:service['title']">
+              </a>
+            </td>
+            <td tal:content="python:service['telephone']">
+            </td>
+            <td tal:content="python:service['mail']">
+            </td>
+          </tr>
+          <tr tal:condition="not:services">
+            <td colspan=3>
+                Pas de services
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+      <h2>Postes de secours</h2>
+      <table  class="listing"
+              id="postes_de_secours"
+              tal:define="postes_de_secours python:view.postes_de_secours()">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Telephone</th>
+            <th>Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="poste_de_secours postes_de_secours">
+            <td>
+              <a href=""
+                tal:attributes="href python:poste_de_secours['url'];
+                                title python:poste_de_secours['description']"
+                tal:content="python:poste_de_secours['title']">
+              </a>
+            </td>
+            <td tal:content="python:poste_de_secours['telephone']">
+            </td>
+            <td tal:content="python:poste_de_secours['mail']">
+            </td>
+          </tr>
+          <tr tal:condition="not:postes_de_secours">
+            <td colspan=3>
+                Pas de Postes de secours
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </metal:content-core>
+  </body>
+</html>
