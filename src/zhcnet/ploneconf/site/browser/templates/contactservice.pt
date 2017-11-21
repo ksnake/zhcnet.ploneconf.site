@@ -31,14 +31,14 @@
       <p>&nbsp;</p>
       <div>
         <span>Zone de secours : </span>
-        <span  tal:content="context/zone_de_secours">
+        <span  tal:content="context/zone_de_secours/to_object/title | nothing">
           Zone de secours
         </span>
       </div>
       <p>&nbsp;</p>
       <div>
         <span>Responsable : </span>
-        <span  tal:content="context/responsable">
+        <span  tal:content="context/responsable/to_object/title | nothing">
           Responsable
         </span>
       </div>

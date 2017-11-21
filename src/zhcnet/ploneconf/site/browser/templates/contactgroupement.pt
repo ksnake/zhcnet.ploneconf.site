@@ -31,21 +31,21 @@
       <p>&nbsp;</p>
       <div>
         <span>Zone de secours : </span>
-        <span  tal:content="context/zone_de_secours">
+        <span  tal:content="context/zone_de_secours/to_object/title | nothing">
           Zone de secours
         </span>
       </div>
       <p>&nbsp;</p>
       <div>
         <span>Chef de groupement : </span>
-        <span  tal:content="context/chef_de_groupement">
+        <span  tal:content="context/chef_de_groupement/to_object/title | nothing">
           L'adresse
         </span>
       </div>
       <p>&nbsp;</p>
       <div>
-        <span>Adresse (Siège) : </span>
-        <span  tal:content="context/siege">
+        <span>Siège : </span>
+        <span  tal:content="context/siege/to_object/title | nothing">
           L'adresse
         </span>
       </div>

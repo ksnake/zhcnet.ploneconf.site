@@ -29,6 +29,13 @@ src/zhcnet/ploneconf/site/browser/views.py
 src/zhcnet/ploneconf/site/browser/overrides/.gitkeep
 src/zhcnet/ploneconf/site/browser/overrides/plone.app.contenttypes.browser.templates.listing_tabular.pt.old
 src/zhcnet/ploneconf/site/browser/static/.gitkeep
+src/zhcnet/ploneconf/site/browser/templates/__init__.py
+src/zhcnet/ploneconf/site/browser/templates/contact.pt
+src/zhcnet/ploneconf/site/browser/templates/contactagent.pt
+src/zhcnet/ploneconf/site/browser/templates/contactgroupement.pt
+src/zhcnet/ploneconf/site/browser/templates/contactpostedesecours.pt
+src/zhcnet/ploneconf/site/browser/templates/contactservice.pt
+src/zhcnet/ploneconf/site/browser/templates/contactzone.pt
 src/zhcnet/ploneconf/site/browser/templates/temp.pt
 src/zhcnet/ploneconf/site/browser/templates/training.pt
 src/zhcnet/ploneconf/site/locales/update.sh
