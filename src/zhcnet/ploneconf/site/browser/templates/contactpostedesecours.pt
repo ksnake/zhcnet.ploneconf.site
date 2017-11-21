@@ -30,15 +30,15 @@
       </p>
       <p>&nbsp;</p>
       <div>
-        <span>Zone de secours : </span>
-        <span  tal:content="context/groupement">
+        <span>Groupement : </span>
+        <span  tal:content="context/groupement/to_object/title | nothing">
           Groupement
         </span>
       </div>
       <p>&nbsp;</p>
       <div>
         <span>Officier gestionnaire de poste : </span>
-        <span  tal:content="context/officier_gestionnaire_de_poste">
+        <span  tal:content="context/officier_gestionnaire_de_poste/to_object/title | nothing">
           Officier gestionnaire de poste
         </span>
       </div>
