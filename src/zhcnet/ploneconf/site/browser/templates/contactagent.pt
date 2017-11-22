@@ -75,8 +75,8 @@
       </div>
       <p>&nbsp;</p>
       <div>
-        <span>Adresse : </span>
-        <span  tal:content="context/localisation">
+        <span>Localisation : </span>
+        <span  tal:content="context/localisation/to_object/title | nothing">
           Localisation
         </span>
       </div>
