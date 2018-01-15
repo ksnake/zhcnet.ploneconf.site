@@ -115,6 +115,39 @@
           </tr>
         </tbody>
       </table>
+      <p>&nbsp;</p>
+      <h2>Agents</h2>
+      <table  class="listing"
+              id="agents"
+              tal:define="agents python:view.agents()">
+        <thead>
+          <tr>
+            <th>Agent</th>
+            <th>Telephone</th>
+            <th>Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="agent agents">
+            <td>
+              <a href=""
+                tal:attributes="href python:agent['url'];
+                                title python:agent['description']"
+                tal:content="python:agent['title']">
+              </a>
+            </td>
+            <td tal:content="python:agent['telephone']">
+            </td>
+            <td tal:content="python:agent['mail']">
+            </td>
+          </tr>
+          <tr tal:condition="not:agents">
+            <td colspan=3>
+                Pas d'agents
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     </metal:content-core>
   </body>
