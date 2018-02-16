@@ -9,7 +9,7 @@ class ContactView(BrowserView):
 
     def services(self):
       results = []
-      brains = api.content.find(context=self.context, depth=2, portal_type='service')
+      brains = api.content.find(context=self.context, depth=2, portal_type='service', sort_on='sortable_title')
       for brain in brains:
         service = brain.getObject()
         results.append({
@@ -26,7 +26,7 @@ class ContactView(BrowserView):
 
     def groupements(self):
       results = []
-      brains = api.content.find(context=self.context, portal_type='groupement')
+      brains = api.content.find(context=self.context, portal_type='groupement', sort_on='sortable_title')
       for brain in brains:
         groupement = brain.getObject()
         results.append({
@@ -44,7 +44,7 @@ class ContactView(BrowserView):
 
     def postes_de_secours(self):
       results = []
-      brains = api.content.find(context=self.context, portal_type='poste_de_secours')
+      brains = api.content.find(context=self.context, portal_type='poste_de_secours', sort_on='sortable_title')
       for brain in brains:
         poste_de_secours = brain.getObject()
         results.append({
@@ -63,7 +63,7 @@ class ContactView(BrowserView):
 
     def agents(self):
       results = []
-      brains = api.content.find(context=self.context, depth=1, portal_type='agent')
+      brains = api.content.find(context=self.context, depth=1, portal_type='agent', sort_on='sortable_title')
       for brain in brains:
         agent = brain.getObject()
         results.append({
@@ -86,7 +86,7 @@ class ContactView(BrowserView):
 
     def contacts(self):
       results = []
-      brains = api.content.find(context=self.context, depth=1, portal_type='contact')
+      brains = api.content.find(context=self.context, depth=1, portal_type='contact', sort_on='sortable_title')
       for brain in brains:
         contact = brain.getObject()
         results.append({

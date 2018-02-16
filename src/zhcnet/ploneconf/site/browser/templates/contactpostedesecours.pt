@@ -125,6 +125,7 @@
             <th>Agent</th>
             <th>Telephone</th>
             <th>Mail</th>
+            <th style="max-width:200px">Fonction</th>
           </tr>
         </thead>
         <tbody>
@@ -140,9 +141,11 @@
             </td>
             <td tal:content="python:agent['mail']">
             </td>
+            <td tal:content="python:agent['fonction']" style="max-width:200px">
+            </td>
           </tr>
           <tr tal:condition="not:agents">
-            <td colspan=3>
+            <td colspan=4>
                 Pas d'agents
             </td>
           </tr>
