@@ -44,6 +44,39 @@
         </span>
       </div>
       <p>&nbsp;</p>
+      <h2>Contacts</h2>
+      <table  class="listing"
+              id="contacts"
+              tal:define="contacts python:view.contacts()">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Telephone</th>
+            <th>Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="contact contacts">
+            <td>
+              <a href=""
+                tal:attributes="href python:contact['url'];
+                                title python:contact['description']"
+                tal:content="python:contact['title']">
+              </a>
+            </td>
+            <td tal:content="python:contact['telephone']">
+            </td>
+            <td tal:content="python:contact['mail']">
+            </td>
+          </tr>
+          <tr tal:condition="not:contacts">
+            <td colspan=3>
+                &nbsp;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
       <h2>Services</h2>
       <table  class="listing"
               id="services"

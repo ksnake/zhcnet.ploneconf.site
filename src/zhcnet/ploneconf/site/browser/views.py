@@ -6,10 +6,10 @@ from plone.dexterity.browser.view import DefaultView
 class ContactView(BrowserView):
     """ Vue pour afficher un contact du type Zone de Secours
     """
-    
+
     def services(self):
       results = []
-      brains = api.content.find(context=self.context, portal_type='service')
+      brains = api.content.find(context=self.context, depth=2, portal_type='service')
       for brain in brains:
         service = brain.getObject()
         results.append({
@@ -59,11 +59,11 @@ class ContactView(BrowserView):
           'mail': poste_de_secours.mail,
           'uuid': brain.UID,
           })
-      return results      
+      return results
 
     def agents(self):
       results = []
-      brains = api.content.find(context=self.context, portal_type='agent')
+      brains = api.content.find(context=self.context, depth=1, portal_type='agent')
       for brain in brains:
         agent = brain.getObject()
         results.append({
@@ -82,11 +82,11 @@ class ContactView(BrowserView):
           'mail': agent.email,
           'uuid': brain.UID,
           })
-      return results       
+      return results
 
     def contacts(self):
       results = []
-      brains = api.content.find(context=self.context, portal_type='contact')
+      brains = api.content.find(context=self.context, depth=1, portal_type='contact')
       for brain in brains:
         contact = brain.getObject()
         results.append({
@@ -100,8 +100,8 @@ class ContactView(BrowserView):
           })
       return results
 
-      
-      
+
+
 class TestTabularContact(BrowserView):
     """ A test list of Contacts
     """
@@ -118,6 +118,3 @@ class TestTabularContact(BrowserView):
           'telephone': ', '.join(contact.telephone),
           })
       return results
-
-		
-		
