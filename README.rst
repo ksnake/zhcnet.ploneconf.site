@@ -46,4 +46,4 @@ Support
 License
 -------
 
-The project is licensed under the GPLv2.
+The project is licensed under the GPLv3.
