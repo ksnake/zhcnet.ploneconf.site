@@ -6,7 +6,7 @@
 zhcnet.ploneconf.site
 ==============================================================================
 
-Tell me what your product does
+ZHCnet personnalisations
 
 Features
 --------
